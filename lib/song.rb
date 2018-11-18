@@ -9,6 +9,7 @@ class Song
     song_info = name.split(" - ")
     song = self.new(song_info[1])
     song.artist = Artist.new(song_info[0])
+    song.artist.add_song(song)
     song
   end 
   
